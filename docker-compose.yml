@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: qdrant
+    ports:
+      - "6333:6333" #REST API (HTTP)
+      - "6334:6334" #gRPC
+    volumes:
+      - qdrant_storage:/qdrant/storage
+    restart: unless-stopped
+
+  trainer:
+    build:
+      context: .
+      dockerfile: docker/trainer.Dockerfile
+    container_name: trainer
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    tty: true
+    ports: 
+      - "8888:8888" #Jupyter
+    env_file:
+      - .env
+
+volumes:
+  qdrant_storage:
