@@ -25,15 +25,15 @@ def search(image_path):
     hits = client.query_points(
         collection_name=COLLECTION,
         query=vec,
-        limit=5,
-        query_filter=Filter(
-            must=[
-                FieldCondition(
-                    key="class",
-                    match=MatchValue(value=pred_class)
-                )
-            ]
-        )
+        limit=5
+        #query_filter=Filter(
+        #    must=[
+        #        FieldCondition(
+        #            key="class",
+        #            match=MatchValue(value=pred_class)
+        #        )
+        #    ]
+        #)
     ).points
 
 

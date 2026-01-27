@@ -13,3 +13,7 @@ qdrant-client
 fastapi
 uvicorn
 python-multipart
+streamlit
+requests
+albumentations
+opencv-python-headless

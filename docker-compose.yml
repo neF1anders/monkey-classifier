@@ -19,14 +19,15 @@ services:
         UID: ${UID}
         GID: ${GID}
     container_name: trainer
-    command: uvicorn src.api.app:app --host 0.0.0.0 --port 8000
+    command: uvicorn src.api.app:app --host 0.0.0.0 --port 8000; streamlit run src/ui/streamlit_app.py --server.port=8502 --server.address=0.0.0.0
     volumes:
       - .:/workspace
     working_dir: /workspace
     tty: true
     ports: 
       - "8080:8888" #Jupyter
-      - "8000:8000"
+      - "8000:8000" #FastAPI
+      - "8502:8502" #Streamlit
     env_file:
       - .env
     deploy:
