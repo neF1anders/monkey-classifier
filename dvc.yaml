@@ -13,3 +13,12 @@ stages:
     - src/data/preprocess.py
     outs:
     - data/processed/ready
+  train_model:
+    cmd: python3 src/train.py
+    deps:
+    - data/processed/ready
+    - src/data/dataset.py
+    - src/models/resnet18.py
+    - src/train.py
+    outs:
+    - models/resnet18.pt

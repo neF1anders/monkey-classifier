@@ -10,8 +10,8 @@ stages:
       isexec: true
     - path: src/data/download_from_inat.py
       hash: md5
-      md5: fdd7f214ad0d2cae54508ea1d218d8b6
-      size: 652
+      md5: a18b67971998e82a6c20fe41d65cb088
+      size: 659
     outs:
     - path: data/processed/images
       hash: md5

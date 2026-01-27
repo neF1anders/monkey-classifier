@@ -14,11 +14,10 @@ for idx, row in tqdm(df.iterrows(), total=len(df)):
     url = row["image_url"]
     label = row["common_name"]
 
-    class_dir = os.path.join(OUT_DIR, label.replace(" ", "_"))
-    os.makedirs(class_dir, exist_ok=True)
-
     try:
         img_data = requests.get(url, timeout=10).content
+        class_dir = os.path.join(OUT_DIR, label.replace(" ", "_"))
+        os.makedirs(class_dir, exist_ok=True)
         img_path = os.path.join(class_dir, f"{idx}.jpg")
         with open(img_path, "wb") as f:
             f.write(img_data)
