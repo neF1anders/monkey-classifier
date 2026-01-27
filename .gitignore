@@ -9,6 +9,7 @@ dvc_storage/
 
 # Env
 .env
+/tmp
 
 # Jupyter
 .ipynb_checkpoints/
