@@ -14,11 +14,15 @@ stages:
     outs:
     - data/processed/ready
   train_model:
-    cmd: python3 src/train.py
+    cmd: python3 src/train.py --outs models/resnet18.pt
     deps:
     - data/processed/ready
     - src/data/dataset.py
     - src/models/resnet18.py
     - src/train.py
+    params:
+    - train
     outs:
     - models/resnet18.pt
+    metrics:
+    - metrics.json

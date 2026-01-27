@@ -36,3 +36,38 @@ stages:
       md5: 9e96fddbae9af77274d8c20778b43937.dir
       size: 48868005
       nfiles: 1610
+  train_model:
+    cmd: python3 src/train.py --outs models/resnet18.pt
+    deps:
+    - path: data/processed/ready
+      hash: md5
+      md5: 9e96fddbae9af77274d8c20778b43937.dir
+      size: 48868005
+      nfiles: 1610
+    - path: src/data/dataset.py
+      hash: md5
+      md5: 687737209ad43164f63939fee30399dd
+      size: 800
+    - path: src/models/resnet18.py
+      hash: md5
+      md5: 47e2082b07064afbba4f6ad29cfde463
+      size: 304
+    - path: src/train.py
+      hash: md5
+      md5: f919ddda59812d2c926eaa105b8953e1
+      size: 2014
+    params:
+      params.yaml:
+        train:
+          epochs: 5
+          lr: 0.001
+          batch_size: 32
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: 75914522a3782749919ac598f0cadd3a
+      size: 36
+    - path: models/resnet18.pt
+      hash: md5
+      md5: 417069034c78e2b614369a10999485f4
+      size: 44844875

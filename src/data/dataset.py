@@ -1,7 +1,7 @@
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader, random_split
 
-DATA_DIR = "../../data/processed/ready"
+DATA_DIR = "data/processed/ready"
 
 def get_dataloaders(batch_size=32, val_split=0.2):
     transform = transforms.Compose([

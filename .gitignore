@@ -12,3 +12,4 @@ dvc_storage/
 
 # Jupyter
 .ipynb_checkpoints/
+/metrics.json
