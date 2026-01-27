@@ -1,0 +1,8 @@
+stages:
+  download_data:
+    cmd: python3 src/data/download_from_inat.py
+    deps:
+    - data/raw/monkeys.csv
+    - src/data/download_from_inat.py
+    outs:
+    - data/processed/images

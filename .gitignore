@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# Data tracked by DVC
+data/processed/
+.dvc/cache/
+dvc_storage/
+
+# Env
+.env
+
+# Jupyter
+.ipynb_checkpoints/

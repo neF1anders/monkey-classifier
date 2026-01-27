@@ -1,0 +1,4 @@
+[core]
+    remote = localstore
+['remote "localstore"']
+    url = /workspace/dvc_storage
