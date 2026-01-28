@@ -40,13 +40,13 @@ dvc exp show
 
 🔗 Resources & References
 
-    (DVC Documentation)[https://doc.dvc.org/]
+    [DVC Documentation](https://doc.dvc.org/)
 
-    (FastAPI Documentation)[https://fastapi.tiangolo.com/]
+    [FastAPI Documentation](https://fastapi.tiangolo.com/)
 
-    (Qdrant Documentation)[https://qdrant.tech/documentation/]
+    [Qdrant Documentation](https://qdrant.tech/documentation/)
 
-    (Streamlit Documentation)[https://docs.streamlit.io/]
+    [Streamlit Documentation](https://docs.streamlit.io/)
 
-    (PyTorch Tutorials)[https://docs.pytorch.org/tutorials/]
+    [PyTorch Tutorials](https://docs.pytorch.org/tutorials/)
 
